@@ -286,6 +286,10 @@ section.main h1 {
         max-width: 366px;
         margin-bottom: 20px;
     }
+    
+    .sm-disappear {
+        display: none;
+    }
 }
 
 /* SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES SLIDES */
@@ -512,13 +516,13 @@ input[name='slide_switch']:checked+label+.slide-itself {
         overflow: hidden;
     }
     
-    input {
+    .tabs-mobile input {
         position: absolute;
         opacity: 0;
         z-index: -1;
     }
     
-    label {
+    .tabs-mobile label {
         position: relative;
         display: block;
         padding: 0 0 0 15px;
@@ -529,7 +533,7 @@ input[name='slide_switch']:checked+label+.slide-itself {
         cursor: pointer;
     }
     
-    .blue label {
+    .tabs-mobile .blue label {
         background: rgb(32, 181, 136);
     }
     
@@ -553,12 +557,12 @@ input[name='slide_switch']:checked+label+.slide-itself {
     }
     
     /* :checked */
-    input:checked ~ .tab-content {
-        max-height: 450px;
+    .tabs-mobile input:checked ~ .tab-content {
+        max-height: 550px;
     }
     
     /* Icon */
-    label::after {
+    .tabs-mobile label::after {
         position: absolute;
         right: 0;
         top: 0;
@@ -572,19 +576,19 @@ input[name='slide_switch']:checked+label+.slide-itself {
         transition: all .35s;
     }
     
-    input[type=checkbox] + label::after {
+    .tabs-mobile input[type=checkbox] + label::after {
         content: "+";
     }
     
-    input[type=radio] + label::after {
+    .tabs-mobile input[type=radio] + label::after {
         content: "\25BC";
     }
     
-    input[type=checkbox]:checked + label::after {
+    .tabs-mobile input[type=checkbox]:checked + label::after {
         transform: rotate(315deg);
     }
     
-    input[type=radio]:checked + label::after {
+    .tabs-mobile input[type=radio]:checked + label::after {
         transform: rotateX(180deg);
     }
     
