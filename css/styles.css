@@ -417,7 +417,7 @@ input[name='slide_switch']:checked+label+.slide-itself {
 /* SCREEN RESOLUTION 1200 and lower - 1200 1200 1200 1200 1200 1200 ---------- */
 @media only screen and (max-width: 1200px) {    
     .slider-menu label {
-        padding: 16px 13px 16px 13px;
+        padding: 16px 12px 16px 12px;
         margin-left: 5px;
         margin-right: 5px;
         margin-top: 10px;
@@ -648,8 +648,12 @@ input[name='slide_switch']:checked+label+.slide-itself {
 
 /* SCREEN RESOLUTION 575 and lower - 575 575 575 575 575 575 ---------- */
 @media only screen and (max-width: 575px) {
+    section.slides {
+        padding: 40px 0px 40px 0px;
+    }
+    
     .tab-button {
-        width: 90%;
+        width: 94%;
         max-width: 320px;
     }
 }
