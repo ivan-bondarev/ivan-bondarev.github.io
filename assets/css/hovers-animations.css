@@ -1,0 +1,422 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 85 version
+*/
+
+.top-bar:hover {
+    background-color: rgba(15,15,15,0.8);
+}
+
+span.menu-hover::before {  
+  -webkit-transform: scaleX(0);  
+     -moz-transform: scaleX(0);  
+      -ms-transform: scaleX(0);  
+       -o-transform: scaleX(0);  
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+     -moz-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+       -o-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+span.menu-hover:hover::before {
+  -webkit-transform: scaleX(1);
+     -moz-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+       -o-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+     -moz-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+       -o-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+span.menu-hover::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200 100% 80%);
+  z-index: -1;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: -o-transform .3s ease;
+  -moz-transition: transform .3s ease, -moz-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease, -moz-transform .3s ease, -o-transform .3s ease;
+}
+
+li a {
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+li a:hover {
+    -webkit-text-decoration: ;
+       -moz-text-decoration: ;
+            text-decoration: ;
+    -webkit-animation: color-hover-disco 2.5s linear infinite;
+       -moz-animation: color-hover-disco 2.5s linear infinite;
+         -o-animation: color-hover-disco 2.5s linear infinite;
+            animation: color-hover-disco 2.5s linear infinite;
+}
+
+
+/*
+.works-href {
+    color: #ffffff !important;
+}
+
+a.works-href:hover {
+    animation: color-hover-disco 2.5s linear infinite !important;
+} */
+
+
+.header-wrapper {
+    background-color: rgba(15,15,15,0.6);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.works-plate-hover .cell img {
+    outline: 0px solid rgba(255,255,255,0.3);
+    z-index: auto;
+    -webkit-transition: outline 0.2s, z-index 0s, -webkit-transform 0.2s;
+    transition: outline 0.2s, z-index 0s, -webkit-transform 0.2s;
+    -o-transition: outline 0.2s, z-index 0s, -o-transform 0.2s;
+    -moz-transition: transform 0.2s, outline 0.2s, z-index 0s, -moz-transform 0.2s;
+    transition: transform 0.2s, outline 0.2s, z-index 0s;
+    transition: transform 0.2s, outline 0.2s, z-index 0s, -webkit-transform 0.2s, -moz-transform 0.2s, -o-transform 0.2s;
+}
+
+.works-plate-hover:hover .cell img {
+    -webkit-transform: scale(106%, 106%);
+       -moz-transform: scale(106%, 106%);
+        -ms-transform: scale(106%, 106%);
+         -o-transform: scale(106%, 106%);
+            transform: scale(106%, 106%);
+    outline: 14px solid;
+    -webkit-animation: outline-hover-disco 2.5s linear infinite;
+       -moz-animation: outline-hover-disco 2.5s linear infinite;
+         -o-animation: outline-hover-disco 2.5s linear infinite;
+            animation: outline-hover-disco 2.5s linear infinite;
+    z-index: 99999999;
+    -webkit-transition: outline 0.3s 0.1s, z-index 0s, -webkit-transform 0.2s;
+    transition: outline 0.3s 0.1s, z-index 0s, -webkit-transform 0.2s;
+    -o-transition: outline 0.3s 0.1s, z-index 0s, -o-transform 0.2s;
+    -moz-transition: transform 0.2s, outline 0.3s 0.1s, z-index 0s, -moz-transform 0.2s;
+    transition: transform 0.2s, outline 0.3s 0.1s, z-index 0s;
+    transition: transform 0.2s, outline 0.3s 0.1s, z-index 0s, -webkit-transform 0.2s, -moz-transform 0.2s, -o-transform 0.2s;
+}
+
+.works-plate-hover .cell h2 {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.works-plate-hover:hover .cell h2 {
+    color: ;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-animation: color-hover-disco 2.5s linear infinite;
+       -moz-animation: color-hover-disco 2.5s linear infinite;
+         -o-animation: color-hover-disco 2.5s linear infinite;
+            animation: color-hover-disco 2.5s linear infinite;
+}
+
+@-webkit-keyframes color-hover-disco {
+    0%{color: rgba(255,255,255,1)}
+    15%{color: rgba(220,20,60,1)}
+    35%{color: rgba(255,165,0,1)}
+    55%{color: rgba(0,139,139,1)}
+    75%{color: rgba(30,144,255,1)}
+    90%{color: rgba(184,134,11,1)}
+    100%{color: rgba(255,255,255,1)}
+}
+
+@-moz-keyframes color-hover-disco {
+    0%{color: rgba(255,255,255,1)}
+    15%{color: rgba(220,20,60,1)}
+    35%{color: rgba(255,165,0,1)}
+    55%{color: rgba(0,139,139,1)}
+    75%{color: rgba(30,144,255,1)}
+    90%{color: rgba(184,134,11,1)}
+    100%{color: rgba(255,255,255,1)}
+}
+
+@-o-keyframes color-hover-disco {
+    0%{color: rgba(255,255,255,1)}
+    15%{color: rgba(220,20,60,1)}
+    35%{color: rgba(255,165,0,1)}
+    55%{color: rgba(0,139,139,1)}
+    75%{color: rgba(30,144,255,1)}
+    90%{color: rgba(184,134,11,1)}
+    100%{color: rgba(255,255,255,1)}
+}
+
+@keyframes color-hover-disco {
+    0%{color: rgba(255,255,255,1)}
+    15%{color: rgba(220,20,60,1)}
+    35%{color: rgba(255,165,0,1)}
+    55%{color: rgba(0,139,139,1)}
+    75%{color: rgba(30,144,255,1)}
+    90%{color: rgba(184,134,11,1)}
+    100%{color: rgba(255,255,255,1)}
+}
+
+@-webkit-keyframes fill-hover-disco {
+    0%{fill: rgba(255,255,255,1)}
+    15%{fill: rgba(220,20,60,1)}
+    35%{fill: rgba(255,165,0,1)}
+    55%{fill: rgba(0,139,139,1)}
+    75%{fill: rgba(30,144,255,1)}
+    90%{fill: rgba(184,134,11,1)}
+    100%{fill: rgba(255,255,255,1)}
+}
+
+@-moz-keyframes fill-hover-disco {
+    0%{fill: rgba(255,255,255,1)}
+    15%{fill: rgba(220,20,60,1)}
+    35%{fill: rgba(255,165,0,1)}
+    55%{fill: rgba(0,139,139,1)}
+    75%{fill: rgba(30,144,255,1)}
+    90%{fill: rgba(184,134,11,1)}
+    100%{fill: rgba(255,255,255,1)}
+}
+
+@-o-keyframes fill-hover-disco {
+    0%{fill: rgba(255,255,255,1)}
+    15%{fill: rgba(220,20,60,1)}
+    35%{fill: rgba(255,165,0,1)}
+    55%{fill: rgba(0,139,139,1)}
+    75%{fill: rgba(30,144,255,1)}
+    90%{fill: rgba(184,134,11,1)}
+    100%{fill: rgba(255,255,255,1)}
+}
+
+@keyframes fill-hover-disco {
+    0%{fill: rgba(255,255,255,1)}
+    15%{fill: rgba(220,20,60,1)}
+    35%{fill: rgba(255,165,0,1)}
+    55%{fill: rgba(0,139,139,1)}
+    75%{fill: rgba(30,144,255,1)}
+    90%{fill: rgba(184,134,11,1)}
+    100%{fill: rgba(255,255,255,1)}
+}
+
+@-webkit-keyframes bg-hover-disco {
+    0%{background-color: rgba(255,255,255,1)}
+    15%{background-color: rgba(220,20,60,1)}
+    35%{background-color: rgba(255,165,0,1)}
+    55%{background-color: rgba(0,139,139,1)}
+    75%{background-color: rgba(30,144,255,1)}
+    90%{background-color: rgba(184,134,11,1)}
+    100%{background-color: rgba(255,255,255,1)}
+}
+
+@-moz-keyframes bg-hover-disco {
+    0%{background-color: rgba(255,255,255,1)}
+    15%{background-color: rgba(220,20,60,1)}
+    35%{background-color: rgba(255,165,0,1)}
+    55%{background-color: rgba(0,139,139,1)}
+    75%{background-color: rgba(30,144,255,1)}
+    90%{background-color: rgba(184,134,11,1)}
+    100%{background-color: rgba(255,255,255,1)}
+}
+
+@-o-keyframes bg-hover-disco {
+    0%{background-color: rgba(255,255,255,1)}
+    15%{background-color: rgba(220,20,60,1)}
+    35%{background-color: rgba(255,165,0,1)}
+    55%{background-color: rgba(0,139,139,1)}
+    75%{background-color: rgba(30,144,255,1)}
+    90%{background-color: rgba(184,134,11,1)}
+    100%{background-color: rgba(255,255,255,1)}
+}
+
+@keyframes bg-hover-disco {
+    0%{background-color: rgba(255,255,255,1)}
+    15%{background-color: rgba(220,20,60,1)}
+    35%{background-color: rgba(255,165,0,1)}
+    55%{background-color: rgba(0,139,139,1)}
+    75%{background-color: rgba(30,144,255,1)}
+    90%{background-color: rgba(184,134,11,1)}
+    100%{background-color: rgba(255,255,255,1)}
+}
+
+@-webkit-keyframes outline-hover-disco {
+    0%{outline-color: rgba(255,255,255,1)}
+    15%{outline-color: rgba(220,20,60,1)}
+    35%{outline-color: rgba(255,165,0,1)}
+    55%{outline-color: rgba(0,139,139,1)}
+    75%{outline-color: rgba(30,144,255,1)}
+    90%{outline-color: rgba(184,134,11,1)}
+    100%{outline-color: rgba(255,255,255,1)}
+}
+
+@-moz-keyframes outline-hover-disco {
+    0%{outline-color: rgba(255,255,255,1)}
+    15%{outline-color: rgba(220,20,60,1)}
+    35%{outline-color: rgba(255,165,0,1)}
+    55%{outline-color: rgba(0,139,139,1)}
+    75%{outline-color: rgba(30,144,255,1)}
+    90%{outline-color: rgba(184,134,11,1)}
+    100%{outline-color: rgba(255,255,255,1)}
+}
+
+@-o-keyframes outline-hover-disco {
+    0%{outline-color: rgba(255,255,255,1)}
+    15%{outline-color: rgba(220,20,60,1)}
+    35%{outline-color: rgba(255,165,0,1)}
+    55%{outline-color: rgba(0,139,139,1)}
+    75%{outline-color: rgba(30,144,255,1)}
+    90%{outline-color: rgba(184,134,11,1)}
+    100%{outline-color: rgba(255,255,255,1)}
+}
+
+@keyframes outline-hover-disco {
+    0%{outline-color: rgba(255,255,255,1)}
+    15%{outline-color: rgba(220,20,60,1)}
+    35%{outline-color: rgba(255,165,0,1)}
+    55%{outline-color: rgba(0,139,139,1)}
+    75%{outline-color: rgba(30,144,255,1)}
+    90%{outline-color: rgba(184,134,11,1)}
+    100%{outline-color: rgba(255,255,255,1)}
+}
+
+.works-plate-hover .cell img {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.contacts-headings {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.contacts-headings:hover {
+    -webkit-animation: color-hover-disco 2.5s linear infinite;
+       -moz-animation: color-hover-disco 2.5s linear infinite;
+         -o-animation: color-hover-disco 2.5s linear infinite;
+            animation: color-hover-disco 2.5s linear infinite;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.contacts-headings:hover .st0 {
+    -webkit-animation: fill-hover-disco 2.5s linear infinite;
+       -moz-animation: fill-hover-disco 2.5s linear infinite;
+         -o-animation: fill-hover-disco 2.5s linear infinite;
+            animation: fill-hover-disco 2.5s linear infinite;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.text-button-hover:hover {
+    -webkit-animation: color-hover-disco 2.5s linear infinite;
+       -moz-animation: color-hover-disco 2.5s linear infinite;
+         -o-animation: color-hover-disco 2.5s linear infinite;
+            animation: color-hover-disco 2.5s linear infinite;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.text-button-a:hover {
+    border-style: dotted;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/*
+.arrow:hover {
+    animation: fill-hover-disco 2.5s linear infinite !important;
+    transition: 0.3s;
+}
+*/
+
+.poster-link {
+    outline: 0px solid rgba(255,255,255,0.3);
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.poster-link:hover {
+    outline: 16px solid;
+    -webkit-animation: outline-hover-disco 2.5s linear infinite;
+       -moz-animation: outline-hover-disco 2.5s linear infinite;
+         -o-animation: outline-hover-disco 2.5s linear infinite;
+            animation: outline-hover-disco 2.5s linear infinite;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.poster-link img {
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.poster-link:hover img {
+    -webkit-transform: scale(106%, 106%);
+       -moz-transform: scale(106%, 106%);
+        -ms-transform: scale(106%, 106%);
+         -o-transform: scale(106%, 106%);
+            transform: scale(106%, 106%);
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    -moz-transition: 0.4s;
+    transition: 0.4s;
+}
+
+@media (max-width: 639px) {
+    .poster-link:hover {
+        outline: 0px;
+        -webkit-animation: none;
+           -moz-animation: none;
+             -o-animation: none;
+                animation: none;
+    }
+    
+    .works-plate-hover:hover .cell img {
+        outline: 0px;
+        -webkit-animation: none;
+           -moz-animation: none;
+             -o-animation: none;
+                animation: none;
+    }
+}
+
+
+
+
+
