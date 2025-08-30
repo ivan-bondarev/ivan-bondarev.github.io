@@ -1,0 +1,156 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSS Text Enhancer</title>
+        <meta property="og:title" content="MSS Text Enhancer" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content=" " />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/css/foundation.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/customized.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/hovers-animations.css" as="style" onload="this.rel='stylesheet'">
+
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+      
+  </head>
+    
+<body>
+
+<script type="text/javascript" src="assets/js/metrika.js"></script>
+<noscript><div><img src="https://mc.yandex.ru/watch/93898630" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+    <div id='preloader'>
+        <div id="preloader-loading">
+        </div>
+    </div>
+    
+    <div id="js-bg-video"></div>
+    
+    <div id="js-header"></div>
+    
+    
+    <div class="content-wrapper">
+        
+    
+    <div class="grid-x grid-margin-x align-center" id="main-container">
+        <div class="cell large-10 medium-12 align-center">
+            <div class="grid-y">
+                <div class="cell">
+                    <p class="text-button first-movie-text" id="enhance-button"><a href="#" class="text-button-a text-button-hover">Обработать</a></p>
+                </div>
+                <div class="cell">
+                    <textarea rows="20" id="enhance-text-holder"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+    
+        <br><br><br><br>
+    
+        
+    <div id="js-footer"></div>
+        
+    </div>
+
+<script src="assets/js/js-components.js?1700"></script>
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+<script src="assets/js/plugins/foundation.core.js"></script>
+<script src="assets/js/plugins/foundation.sticky.js"></script>
+
+<script>
+window.onload = function() {
+    let preloader = document.getElementById('preloader');
+    preloader.classList.add('hide-preloader');
+    setInterval(function() {
+          preloader.classList.add('preloader-hidden');
+    }, 1990);
+}
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('enhance-button').addEventListener('click', function() {
+
+    const textarea = document.getElementById('enhance-text-holder');
+    let text = textarea.value;
+    // console.log('Исходный текст:', text);
+    
+    // Применяем все правила замены
+    text = text
+        .replaceAll(/(\d),0/g, "$1")
+        .replaceAll(/(\d),(\d{1,})(0{1,})/g, "$1,$2")
+        .replaceAll(/(\d)\s%/g, "$1%")
+        .replaceAll(/№\s(\d)/g, "№$1")
+        .replaceAll(/(\s)?000\s?000\s?000\s/g, '$1млрд ')
+        .replaceAll(/(\s)?000\s?000\s/g, '$1млн ')
+        .replaceAll(/(\s)?000\s/g, '$1тыс. ')
+        .replaceAll(/(стан)(а|у|ом|е|ы|ов|ам|ами|ах)?\s(1|2|3|4|5)тыс\./gi, '$1$2 $3000')
+        .replaceAll(/(1|2)тыс\.\s(год|г\.)/gi, '$1000 $2')
+        .replaceAll(/(ИНН|КПП|БИК|номер|тел|ОГРН|№)(.{1-4})?(\s)?(\d{1,})(млрд)/gi, '$1$2$3$4000000000')
+        .replaceAll(/(ИНН|КПП|БИК|номер|тел|ОГРН|№)(.{1-4})?(\s)?(\d{1,})(млн)/gi, '$1$2$3$4000000')
+        .replaceAll(/(ИНН|КПП|БИК|номер|тел|ОГРН|№)(.{1-4})?(\s)?(\d{1,})(тыс.)/gi, '$1$2$3$4000')
+        .replaceAll(/(\d{4})\s(год)(а|у)?/g, "$1 г.")
+        .replaceAll(/(\d)(млрд|млн|тыс\.)/g, '$1 $2')
+        .replaceAll(/(\d)\s(тысяч)(а|и)?(ми)?/g, '$1 тыс.')
+        .replaceAll(/(\d)\s(миллион)(а|ов)?(ми)?/g, '$1 млн')
+        .replaceAll(/(\d)\s(миллиард)(а|ов)?(ми)?/g, '$1 млрд')
+        .replaceAll(/(\d)\s(триллион)(а|ов)?(ми)?/g, '$1 трлн')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(м2|м&sup2;|кв\.\s?метров|квадратных\sметров)/g, "$1 м<sup>2</sup>")
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(кв\.\s?м)/g, "$1 м<sup>2</sup>")
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(м3|м&sup3;|куб\.\s?метров|кубических\sметров|кубометров)/g, "$1 м<sup>3</sup>")
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(куб\.\s?м)/g, "$1 м<sup>3</sup>")
+        .replaceAll(/(\d|тыс\.|млн|млрд|трлн)\s(рубл)(ей|я|ь)(ми)?/g, '$1 руб.')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(тонн)(а|ы|у|е)?/g, '$1 т')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(килограмм)(а|ов|ом)?(ми)?/g, '$1 кг')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(грамм)(а|ов|ом)?(ми)?/g, '$1 г')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(километр)(а|ов|ом)?(ми)?/g, '$1 км')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(метр)(а|ов|ом)?(ми)?/g, '$1 м')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(сантиметр)(а|ов|ом)?(ми)?/g, '$1 см')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(миллиметр)(а|ов|ом)?(ми)?/g, '$1 мм')
+        .replaceAll(/(\d{3})(\d{3})(\d{3})/g, "$1 $2 $3")
+        .replaceAll(/(\d{2})(\d{3})(\d{3})/g, "$1 $2 $3")
+        .replaceAll(/(\d{1})(\d{3})(\d{3})/g, "$1 $2 $3")
+        .replaceAll(/(\d{3})(\d{3})/g, "$1 $2")
+        .replaceAll(/(\d{2})(\d{3})/g, "$1 $2")
+        // .replaceAll(/(\d{1})(\d{3})(?!\s(?:год|г\.[А-ЯA-Z]|г\.\.))/g, "$1 $2 ")
+        .replaceAll(/(1)-?(ое|ому|ого|му|го|ым|ом|е|о|у)?\s?(полугоди)(ем|я|ю|и|е\s)/gi, "I $3$4")
+        .replaceAll(/(перв)(ое|ому|ого|ым|ом)\s(полугоди)(ем|я|ю|и|е\s)/gi, "I $3$4")
+        .replaceAll(/(2)-?(ое|ому|ого|му|го|ым|ом|е|о|у)?\s?(полугоди)(ем|я|ю|и|е\s)/gi, "II $3$4")
+        .replaceAll(/(втор)(ое|ому|ого|ым|ом)\s(полугоди)(ем|я|ю|и|е\s)/gi, "II $3$4")
+        .replaceAll(/(1)-?(ый|ому|ого|му|го|ым|й|о|у)?\s(квартал)(а|у|е|ом)?/gi, "I $3$4")
+        .replaceAll(/(перв)(ый|ому|ого|ым|ом)\s(квартал)(а|у|е|ом)?/gi, "I $3$4")
+        .replaceAll(/(2)-?(ой|ому|ого|му|го|ым|й|о|у)?\s(квартал)(а|у|е|ом)?/gi, "II $3$4")
+        .replaceAll(/(втор)(ой|ому|ого|ым|ом)\s(квартал)(а|у|е|ом)?/gi, "II $3$4")
+        .replaceAll(/(3)-?(ый|ому|ого|му|го|ым|й|о|у)?\s(квартал)(а|у|е|ом)?/gi, "III $3$4")
+        .replaceAll(/(трет)(ий|ьему|ьего|ьим|ьем\s)\s?(квартал)(а|у|е|ом)?/gi, "III $3$4")
+        .replaceAll(/(4)-?(ый|ому|ого|му|го|ым|й|о|у)?\s(квартал)(а|у|е|ом)?/gi, "IV $3$4")
+        .replaceAll(/(четверт|четвёрт)(ый|ому|ого|ым|ом)\s(квартал)(а|у|е|ом)?/gi, "IV $3$4")
+        .replaceAll(/(ё)/g, "е")
+        .replaceAll(/(Ё)/g, "Е")
+        .replaceAll(/(г|тыс|руб)\.\./g, '$1.');
+
+    // Обновляем содержимое textarea
+    textarea.value = text;
+    });
+});
+</script>
+
+</body>
+</html>
