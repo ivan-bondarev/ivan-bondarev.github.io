@@ -173,9 +173,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .replaceAll(/(Ё)/g, "Е")
         .replaceAll(/(—)/g, "–")
         .replaceAll(/(&mdash;)/g, "&ndash;")
-        .replaceAll(/(<p>)(.{1,})\s(-)\s(.{1,})(<\/p>)/g, "$1$2 &ndash; $4$5")
+        .replaceAll(/<p>(.{1,})\s(-)\s(.{1,})<\/p>/g, "<p>$2 &ndash; $4</p>")
         .replaceAll(/\s(-)\s/g, " – ")
-        .replaceAll(/»,\s(-)\s/g, " – ")
+        .replaceAll(/<p>(.{1,})&quot;(.{1,})&quot;,\s–(.{1,})<\/p>/g, "<p>$1&laquo;$2&raquo;, –$3</p>")
+        .replaceAll(/"(.{1,})",\s–/g, "«$1», –")
         // -
         .replaceAll(/(г|тыс|руб)\.\./g, '$1.');
 
