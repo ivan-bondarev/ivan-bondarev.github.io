@@ -42,17 +42,29 @@
         
     
     <div class="grid-x grid-margin-x align-center" id="main-container">
-        <div class="cell large-10 medium-12 align-center">
+        <div class="cell large-10 medium-11 align-center">
             <div class="grid-y">
+
                 <div class="cell">
-                    <p class="text-button first-movie-text" id="enhance-button"><a href="#" class="text-button-a text-button-hover">Обработать</a></p>
+                    <div class="grid-x" id="buttons-container">
+                        <div class="cell shrink">
+                            <p class="text-button" id="enhance-button"><a href="#" class="text-button-a text-button-hover">Обработать текст</a></p>
+                        </div>
+                        <div class="cell shrink">
+                            <p class="text-button" id="deenter-button" style="margin-left: 1vw;"><a href="#" class="text-button-a text-button-hover">–переносы</a></p>
+                        </div>
+                        <div class="cell shrink">
+                            <p class="text-button" id="despace-button" style="margin-left: 1vw;"><a href="#" class="text-button-a text-button-hover">–x2пробелы</a></p>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="cell">
                     <textarea rows="20" id="enhance-text-holder"></textarea>
                 </div>
+
             </div>
         </div>
-
     </div>
 
     
@@ -98,42 +110,56 @@ document.addEventListener('DOMContentLoaded', function() {
         .replaceAll(/(\d),(\d{1,})(0{1,})/g, "$1,$2")
         .replaceAll(/(\d)\s%/g, "$1%")
         .replaceAll(/№\s(\d)/g, "№$1")
+        // -
         .replaceAll(/(\s)?000\s?000\s?000\s/g, '$1млрд ')
         .replaceAll(/(\s)?000\s?000\s/g, '$1млн ')
         .replaceAll(/(\s)?000\s/g, '$1тыс. ')
-        .replaceAll(/(стан)(а|у|ом|е|ы|ов|ам|ами|ах)?\s(1|2|3|4|5)тыс\./gi, '$1$2 $3000')
+        .replaceAll(/(стан)(а|у|ом|е|ы|ов)?(х|м)?(и)?\s(1|2|3|4|5)тыс\./gi, '$1$2$3 $4000')
         .replaceAll(/(1|2)тыс\.\s(год|г\.)/gi, '$1000 $2')
         .replaceAll(/(ИНН|КПП|БИК|номер|тел|ОГРН|№)(.{1-4})?(\s)?(\d{1,})(млрд)/gi, '$1$2$3$4000000000')
         .replaceAll(/(ИНН|КПП|БИК|номер|тел|ОГРН|№)(.{1-4})?(\s)?(\d{1,})(млн)/gi, '$1$2$3$4000000')
         .replaceAll(/(ИНН|КПП|БИК|номер|тел|ОГРН|№)(.{1-4})?(\s)?(\d{1,})(тыс.)/gi, '$1$2$3$4000')
-        .replaceAll(/(\d{4})\s(год)(а|у)?/g, "$1 г.")
+        // -
         .replaceAll(/(\d)(млрд|млн|тыс\.)/g, '$1 $2')
         .replaceAll(/(\d)\s(тысяч)(а|и)?(ми)?/g, '$1 тыс.')
         .replaceAll(/(\d)\s(миллион)(а|ов)?(ми)?/g, '$1 млн')
         .replaceAll(/(\d)\s(миллиард)(а|ов)?(ми)?/g, '$1 млрд')
         .replaceAll(/(\d)\s(триллион)(а|ов)?(ми)?/g, '$1 трлн')
-        .replaceAll(/(\d|тыс\.|млн|млрд)\s(м2|м&sup2;|кв\.\s?метров|квадратных\sметров)/g, "$1 м<sup>2</sup>")
-        .replaceAll(/(\d|тыс\.|млн|млрд)\s(кв\.\s?м)/g, "$1 м<sup>2</sup>")
-        .replaceAll(/(\d|тыс\.|млн|млрд)\s(м3|м&sup3;|куб\.\s?метров|кубических\sметров|кубометров)/g, "$1 м<sup>3</sup>")
-        .replaceAll(/(\d|тыс\.|млн|млрд)\s(куб\.\s?м)/g, "$1 м<sup>3</sup>")
+        // -
+        .replaceAll(/(<p>)(.{1,})(\d|тыс\.|млн|млрд)\s(м2|м&sup2;)\s/g, "$1$2$3 м<sup>2</sup> ")
+        .replaceAll(/(<p>)(.{1,})(\d|тыс\.|млн|млрд)\s(кв\.?)(адратн)?(ых|ими|ого|ым)?\s?(м)(етр)?(ов|ах|ам)?(и)?\s/g, "$1$2$3 м<sup>2</sup> ")
+        .replaceAll(/(<p>)(.{1,})(\d|тыс\.|млн|млрд)\s(м3|м&sup3;)\s/g, "$1$2$3 м<sup>3</sup> ")
+        .replaceAll(/(<p>)(.{1,})(\d|тыс\.|млн|млрд)\s(куб\.?)(ическ)?(их|ими|ого|им)?\s?(м)(етр)?(ов|ах|ам)?(и)?\s/g, "$1$2$3 м<sup>3</sup> ")
+        .replaceAll(/(<p>)(.{1,})(\d|тыс\.|млн|млрд)\s(кубометр)(ов|ам|у)?(и)?/g, "$1$2$3 м<sup>3</sup>")
+        // -
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(м2|м&sup2;)\s/g, "$1 м² ")
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(кв\.?)(адратн)?(ых|ими|ого|ым)?\s?(м)(етр)?(ов|ах|ам)?(и)?\s/g, "$1 м² ")
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(м3|м&sup3;)\s/g, "$1 м³ ")
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(куб\.?)(ическ)?(их|ими|ого|им)?\s?(м)(етр)?(ов|ах|ам)?(и)?\s/g, "$1 м³ ")
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(кубометр)(ов|ам|у)?(и)?/g, "$1 м³")
+        // -
+        .replaceAll(/(\d{4})\s(год)(а|у)?/g, "$1 г.")
         .replaceAll(/(\d|тыс\.|млн|млрд|трлн)\s(рубл)(ей|я|ь)(ми)?/g, '$1 руб.')
-        .replaceAll(/(\d|тыс\.|млн|млрд)\s(тонн)(а|ы|у|е)?/g, '$1 т')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(тонн)(а|ы|у|е)?(ми)?/g, '$1 т')
         .replaceAll(/(\d|тыс\.|млн|млрд)\s(килограмм)(а|ов|ом)?(ми)?/g, '$1 кг')
         .replaceAll(/(\d|тыс\.|млн|млрд)\s(грамм)(а|ов|ом)?(ми)?/g, '$1 г')
-        .replaceAll(/(\d|тыс\.|млн|млрд)\s(километр)(а|ов|ом)?(ми)?/g, '$1 км')
-        .replaceAll(/(\d|тыс\.|млн|млрд)\s(метр)(а|ов|ом)?(ми)?/g, '$1 м')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(километр)(а|ов|ом)?(ми|х)?/g, '$1 км')
+        .replaceAll(/(\d|тыс\.|млн|млрд)\s(метр)(а|ов|ом)?(ми|х)?/g, '$1 м')
         .replaceAll(/(\d|тыс\.|млн|млрд)\s(сантиметр)(а|ов|ом)?(ми)?/g, '$1 см')
         .replaceAll(/(\d|тыс\.|млн|млрд)\s(миллиметр)(а|ов|ом)?(ми)?/g, '$1 мм')
+        // -
         .replaceAll(/(\d{3})(\d{3})(\d{3})/g, "$1 $2 $3")
         .replaceAll(/(\d{2})(\d{3})(\d{3})/g, "$1 $2 $3")
         .replaceAll(/(\d{1})(\d{3})(\d{3})/g, "$1 $2 $3")
         .replaceAll(/(\d{3})(\d{3})/g, "$1 $2")
         .replaceAll(/(\d{2})(\d{3})/g, "$1 $2")
         // .replaceAll(/(\d{1})(\d{3})(?!\s(?:год|г\.[А-ЯA-Z]|г\.\.))/g, "$1 $2 ")
+        // -
         .replaceAll(/(1)-?(ое|ому|ого|му|го|ым|ом|е|о|у)?\s?(полугоди)(ем|я|ю|и|е\s)/gi, "I $3$4")
         .replaceAll(/(перв)(ое|ому|ого|ым|ом)\s(полугоди)(ем|я|ю|и|е\s)/gi, "I $3$4")
         .replaceAll(/(2)-?(ое|ому|ого|му|го|ым|ом|е|о|у)?\s?(полугоди)(ем|я|ю|и|е\s)/gi, "II $3$4")
         .replaceAll(/(втор)(ое|ому|ого|ым|ом)\s(полугоди)(ем|я|ю|и|е\s)/gi, "II $3$4")
+        // -
         .replaceAll(/(1)-?(ый|ому|ого|му|го|ым|й|о|у)?\s(квартал)(а|у|е|ом)?/gi, "I $3$4")
         .replaceAll(/(перв)(ый|ому|ого|ым|ом)\s(квартал)(а|у|е|ом)?/gi, "I $3$4")
         .replaceAll(/(2)-?(ой|ому|ого|му|го|ым|й|о|у)?\s(квартал)(а|у|е|ом)?/gi, "II $3$4")
@@ -142,9 +168,50 @@ document.addEventListener('DOMContentLoaded', function() {
         .replaceAll(/(трет)(ий|ьему|ьего|ьим|ьем\s)\s?(квартал)(а|у|е|ом)?/gi, "III $3$4")
         .replaceAll(/(4)-?(ый|ому|ого|му|го|ым|й|о|у)?\s(квартал)(а|у|е|ом)?/gi, "IV $3$4")
         .replaceAll(/(четверт|четвёрт)(ый|ому|ого|ым|ом)\s(квартал)(а|у|е|ом)?/gi, "IV $3$4")
+        // -
         .replaceAll(/(ё)/g, "е")
         .replaceAll(/(Ё)/g, "Е")
+        .replaceAll(/(—)/g, "–")
+        .replaceAll(/(&mdash;)/g, "&ndash;")
+        .replaceAll(/(<p>)(.{1,})\s(-)\s(.{1,})(<\/p>)/g, "$1$2 &ndash; $4$5")
+        .replaceAll(/\s(-)\s/g, " – ")
+        .replaceAll(/»,\s(-)\s/g, " – ")
+        // -
         .replaceAll(/(г|тыс|руб)\.\./g, '$1.');
+
+    // Обновляем содержимое textarea
+    textarea.value = text;
+    });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('deenter-button').addEventListener('click', function() {
+
+    const textarea = document.getElementById('enhance-text-holder');
+    let text = textarea.value;
+
+    // Применяем все правила замены
+    text = text
+        .replaceAll(/\r?\n/g, " ");
+
+    // Обновляем содержимое textarea
+    textarea.value = text;
+    });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('despace-button').addEventListener('click', function() {
+
+    const textarea = document.getElementById('enhance-text-holder');
+    let text = textarea.value;
+
+    // Применяем все правила замены
+    text = text
+        .replaceAll(/\s\s{1,}/g, " ");
 
     // Обновляем содержимое textarea
     textarea.value = text;
