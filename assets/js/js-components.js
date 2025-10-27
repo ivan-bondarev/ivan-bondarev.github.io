@@ -172,10 +172,10 @@ document.getElementById("js-footer").innerHTML = `
             <p class="mild-text regular-text">Это футер, чтобы было понятно, <br class="hide-for-large">что страница закончилась.</p>
         </div>
         <div class="cell footer-texts">
-            <p class="mild-text regular-text">Сайт собрал на <a class="text-button-hover" style="color: #ffffff" target="_blank" rel="noopener noreferrer" href="https://github.com/foundation"><strong>Foundation</strong></a>.</p>
+            <p class="mild-text regular-text">Сайт собрал на <a class="text-button-hover" style="color: #ffffff" target="_blank" rel="noopener noreferrer" href="https://github.com/foundation"><strong>Foundation</strong></a>. Карусели - <a class="text-button-hover" style="color: #ffffff" target="_blank" rel="noopener noreferrer" href="https://github.com/rcbyr/keen-slider"><strong>Keen-slider</strong></a>.</p>
         </div>
         <div class="cell footer-texts">
-            <p class="mild-text regular-text">Ну и вот копирайт, раз уж так принято:<br>Иван Бондарев © 12023</p>
+            <p class="mild-text regular-text">Ну и вот копирайт, раз уж так принято:<br>Иван Бондарев © 12025</p>
         </div>
     </div>
     `;

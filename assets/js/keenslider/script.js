@@ -92,6 +92,10 @@ function navigation(slider) {
   })
 }
 
+var slider = new KeenSlider("#my-keen-slider-20", {}, [navigation])
+
+var slider = new KeenSlider("#my-keen-slider-19", {}, [navigation])
+
 var slider = new KeenSlider("#my-keen-slider-18", {}, [navigation])
 
 var slider = new KeenSlider("#my-keen-slider-17", {}, [navigation])
