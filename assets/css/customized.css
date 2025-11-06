@@ -1504,256 +1504,89 @@ p.text-button {
 
 /*  To Gathering Animation */
 
-.3d-rotation-space {
-    -webkit-perspective: ;
-            perspective: ;
-}
-
-@-webkit-keyframes infYrotate {
-    0% {
-        -webkit-transform: rotateY(0deg);
-                transform: rotateY(0deg);
-        opacity: 100;
-    }
-    25% {
-        -webkit-transform: rotateY(90deg);
-                transform: rotateY(90deg);
-        opacity: 0;
-    }
-    50% {
-        -webkit-transform: rotateY(180deg);
-                transform: rotateY(180deg);
-        opacity: 100;
-    }
-    75% {
-        -webkit-transform: rotateY(270deg);
-                transform: rotateY(270deg);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: rotateY(360);
-                transform: rotateY(360);
-        opacity: 100;
-    }
-}
-
-@keyframes infYrotate {
-    0% {
-        -webkit-transform: rotateY(0deg);
-                transform: rotateY(0deg);
-        opacity: 100;
-    }
-    25% {
-        -webkit-transform: rotateY(90deg);
-                transform: rotateY(90deg);
-        opacity: 0;
-    }
-    50% {
-        -webkit-transform: rotateY(180deg);
-                transform: rotateY(180deg);
-        opacity: 100;
-    }
-    75% {
-        -webkit-transform: rotateY(270deg);
-                transform: rotateY(270deg);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: rotateY(360);
-                transform: rotateY(360);
-        opacity: 100;
-    }
-}
-
-.to-gathering-rotater {
-    -webkit-animation: infYrotate 2s infinite;
-            animation: infYrotate 2s infinite;
-}
-
-@-webkit-keyframes togatheringinfYrotate {
-    0% {
-        -webkit-transform: rotateY(90deg);
-                transform: rotateY(90deg);
-        opacity: 0;
-        background: url(../img/arts/12023-10-02-squares-net-013_c.jpg);
-    }
-    1% {
-        -webkit-transform: rotateY(90deg);
-                transform: rotateY(90deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-02-squares-net-013_c.jpg);
-    }
-    25% {
-        -webkit-transform: rotateY(180deg);
-                transform: rotateY(180deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-02-squares-net-013_c.jpg);
-    }
-    49% {
-        -webkit-transform: rotateY(270deg);
-                transform: rotateY(270deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-02-squares-net-013_c.jpg);
-    }
-    50% {
-        -webkit-transform: rotateY(270deg);
-                transform: rotateY(270deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-01-squares-net-012_c.jpg);
-    }
-    75% {
-        -webkit-transform: rotateY(360deg);
-                transform: rotateY(360deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-01-squares-net-012_c.jpg);
-    }
-    99% {
-        -webkit-transform: rotateY(450deg);
-                transform: rotateY(450deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-01-squares-net-012_c.jpg);
-    }
-    100% {
-        -webkit-transform: rotateY(450deg);
-                transform: rotateY(450deg);
-        opacity: 0;
-        background: url(../img/arts/12023-10-01-squares-net-012_c.jpg);
-    }
-}
-
-@keyframes togatheringinfYrotate {
-    0% {
-        -webkit-transform: rotateY(90deg);
-                transform: rotateY(90deg);
-        opacity: 0;
-        background: url(../img/arts/12023-10-02-squares-net-013_c.jpg);
-    }
-    1% {
-        -webkit-transform: rotateY(90deg);
-                transform: rotateY(90deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-02-squares-net-013_c.jpg);
-    }
-    25% {
-        -webkit-transform: rotateY(180deg);
-                transform: rotateY(180deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-02-squares-net-013_c.jpg);
-    }
-    49% {
-        -webkit-transform: rotateY(270deg);
-                transform: rotateY(270deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-02-squares-net-013_c.jpg);
-    }
-    50% {
-        -webkit-transform: rotateY(270deg);
-                transform: rotateY(270deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-01-squares-net-012_c.jpg);
-    }
-    75% {
-        -webkit-transform: rotateY(360deg);
-                transform: rotateY(360deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-01-squares-net-012_c.jpg);
-    }
-    99% {
-        -webkit-transform: rotateY(450deg);
-                transform: rotateY(450deg);
-        opacity: 100;
-        background: url(../img/arts/12023-10-01-squares-net-012_c.jpg);
-    }
-    100% {
-        -webkit-transform: rotateY(450deg);
-                transform: rotateY(450deg);
-        opacity: 0;
-        background: url(../img/arts/12023-10-01-squares-net-012_c.jpg);
-    }
-}
 
 @-webkit-keyframes togatheringinfYrotate3d {
     0% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, -90deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, -90deg);
         opacity: 0;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
     }
     1% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, -90deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, -90deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
         background-size: cover;
     }
     20% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 0deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 0deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
         background-size: cover;
     }
     30% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 0deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 0deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
         background-size: cover;
     }
     48% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 90deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 90deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
         background-size: cover;
     }
     49% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 90deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 90deg);
         opacity: 0;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
         background-size: cover;
     }
     50% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 270deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 270deg);
         opacity: 0;
-        background: url(../img/arts/to-gathering-side-k_c.png);
+        background: url(../img/arts/to-gathering-side-k_c.jpg);
         background-size: cover;
     }
     51% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 270deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 270deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-k_c.png);
+        background: url(../img/arts/to-gathering-side-k_c.jpg);
         background-size: cover;
     }
     70% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 360deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 360deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-k_c.png);
+        background: url(../img/arts/to-gathering-side-k_c.jpg);
         background-size: cover;
     }
     80% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 360deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 360deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-k_c.png) center;
+        background: url(../img/arts/to-gathering-side-k_c.jpg) center;
         background-size: cover;
     }
     99% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 450deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 450deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-k_c.png);
+        background: url(../img/arts/to-gathering-side-k_c.jpg);
         background-size: cover;
     }
     100% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 450deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 450deg);
         opacity: 0;
-        background: url(../img/arts/to-gathering-side-k_c.png);
+        background: url(../img/arts/to-gathering-side-k_c.jpg);
         background-size: cover;
     }
 }
@@ -1763,83 +1596,83 @@ p.text-button {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, -90deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, -90deg);
         opacity: 0;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
     }
     1% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, -90deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, -90deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
         background-size: cover;
     }
     20% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 0deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 0deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
         background-size: cover;
     }
     30% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 0deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 0deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
         background-size: cover;
     }
     48% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 90deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 90deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
         background-size: cover;
     }
     49% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 90deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 90deg);
         opacity: 0;
-        background: url(../img/arts/to-gathering-side-b_c.png);
+        background: url(../img/arts/to-gathering-side-b_c.jpg);
         background-size: cover;
     }
     50% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 270deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 270deg);
         opacity: 0;
-        background: url(../img/arts/to-gathering-side-k_c.png);
+        background: url(../img/arts/to-gathering-side-k_c.jpg);
         background-size: cover;
     }
     51% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 270deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 270deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-k_c.png);
+        background: url(../img/arts/to-gathering-side-k_c.jpg);
         background-size: cover;
     }
     70% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 360deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 360deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-k_c.png);
+        background: url(../img/arts/to-gathering-side-k_c.jpg);
         background-size: cover;
     }
     80% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 360deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 360deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-k_c.png) center;
+        background: url(../img/arts/to-gathering-side-k_c.jpg) center;
         background-size: cover;
     }
     99% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 450deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 450deg);
         opacity: 100;
-        background: url(../img/arts/to-gathering-side-k_c.png);
+        background: url(../img/arts/to-gathering-side-k_c.jpg);
         background-size: cover;
     }
     100% {
         -webkit-transform: perspective(1100px) rotate3d(0, 1, 0, 450deg);
                 transform: perspective(1100px) rotate3d(0, 1, 0, 450deg);
         opacity: 0;
-        background: url(../img/arts/to-gathering-side-k_c.png);
+        background: url(../img/arts/to-gathering-side-k_c.jpg);
         background-size: cover;
     }
 }
