@@ -175,7 +175,7 @@ document.getElementById("js-footer").innerHTML = `
             <p class="mild-text regular-text">Сайт собрал на <a class="text-button-hover" style="color: #ffffff" target="_blank" rel="noopener noreferrer" href="https://github.com/foundation"><strong>Foundation</strong></a>. Карусели - <a class="text-button-hover" style="color: #ffffff" target="_blank" rel="noopener noreferrer" href="https://github.com/rcbyr/keen-slider"><strong>Keen-slider</strong></a>.</p>
         </div>
         <div class="cell footer-texts">
-            <p class="mild-text regular-text">Ну и вот копирайт, раз уж так принято:<br>Иван Бондарев © 12025</p>
+            <p class="mild-text regular-text">Ну и вот копирайт, раз уж так принято:<br>Иван Бондарев © 12026</p>
         </div>
     </div>
     `;
